@@ -30,3 +30,7 @@ Install chakra UI
 `npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion`
 
 Creation du visuel dashbord avec chakra Ui
+
+implementaton calendrier avec iframe
+
+npm i react-iframe

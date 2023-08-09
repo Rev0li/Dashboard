@@ -8,40 +8,44 @@ import {
   MenuButton,
   MenuList,
 } from "@chakra-ui/react";
-import NavHoverBox from "./NavHoverBox";
 
-export default function NavItem({ icon, title, description, active, navSize }) {
+export default function NavItem({
+  icon,
+  title,
+  description,
+  active,
+  navSize,
+  onClick,
+}) {
   return (
-    <Flex
-      mt={30}
-      flexDir="column"
-      w="100%"
-      alignItems={navSize == "small" ? "center" : "flex-start"}
-    >
+    <Flex mt={30} flexDir="column" w="100%" alignItems={"center"}>
       <Menu placement="right">
         <Link
-          backgroundColor={active && "#AEC8CA"}
+          backgroundColor={active && "#6fa5b1"}
           p={3}
           borderRadius={8}
-          _hover={{ textDecor: "none", backgroundColor: "#AEC8CA" }}
+          _hover={{ textDecor: "none", backgroundColor: "#6fa5b1" }}
           w={navSize == "large" && "100%"}
+          onClick={() => onClick()} // Passer le titre ici lorsqu'il est cliqué
         >
-          <MenuButton w="100%">
+          <MenuButton w="100%" mt={2}>
             <Flex>
               <Icon
+                className="icon-navItem"
                 as={icon}
                 fontSize="xl"
-                color={active ? "#82AAAD" : "gray.100"}
+                color={active ? "gray.100" : "#4e6b9f"}
               />
-              <Text ml={5} display={navSize == "small" ? "none" : "flex"}>
+              <Text
+                ml={5}
+                display={navSize == "small" ? "none" : "flex"}
+                color={active ? "gray.100" : "#4e6b9f"}
+              >
                 {title}
               </Text>
             </Flex>
           </MenuButton>
         </Link>
-        <MenuList py={0} border="none" w={200} h={200} ml={5}>
-          <NavHoverBox title={title} icon={icon} description={description} />
-        </MenuList>
       </Menu>
     </Flex>
   );

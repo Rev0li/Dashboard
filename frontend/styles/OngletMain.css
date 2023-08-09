@@ -1,0 +1,9 @@
+.container-onglet{
+  position:absolute;
+  right: 3vw;
+  height:83vh;
+  margin-top:2.5vh;
+  flex-direction:column;
+  background-color:#4e6b9f; 
+  width: calc(100vw - 300px);
+}

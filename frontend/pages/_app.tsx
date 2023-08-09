@@ -1,4 +1,5 @@
-import '../styles/globals.css';
+
+import customTheme from "../styles/theme.js";
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
@@ -29,8 +30,8 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: 'DAO-Sport',
+  projectId: '7c09cd5a696e2b3ccd61d6207374d25d',
   chains,
 });
 
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-        <ChakraProvider>
+        <ChakraProvider theme={customTheme}>
         
         <Component {...pageProps} />
         </ChakraProvider>
