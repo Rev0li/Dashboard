@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 import SideBar from "../components/Sidebar";
@@ -17,7 +17,6 @@ const Home = () => {
   const handleNavItemClick = (title) => {
     setActiveNavItem(title);
   };
-  console.log(Flex);
   return (
     <Flex
       h={"100vh"}
@@ -46,7 +45,8 @@ const Home = () => {
         p={4}
         color="white"
       >
-        This is the Flex <ConnectButton />
+        <Text>This is the Footer</Text>
+        <ConnectButton />
       </Flex>
     </Flex>
   );

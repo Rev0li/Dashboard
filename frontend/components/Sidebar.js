@@ -19,6 +19,8 @@ import {
 } from "react-icons/fi";
 import NavItem from "./NavItem";
 
+import profilpict from "./img/IMG_6817.JPG";
+
 export default function Sidebar({ fnHandleNavItem, coActive }) {
   const [navSize, changeNavSize] = useState("large");
 
@@ -110,16 +112,15 @@ export default function Sidebar({ fnHandleNavItem, coActive }) {
       >
         <Divider display={navSize == "small" ? "none" : "flex"} />
         <Flex mt={4} align="center">
-          <Avatar size="sm" src="avatar-1.jpg" />
+          <Avatar size="sm" src={profilpict} />
           <Flex
             flexDir="column"
             ml={4}
             display={navSize == "small" ? "none" : "flex"}
           >
             <Heading as="h3" size="sm">
-              SOliver
+              <Text>Futur name of connection</Text>
             </Heading>
-            <Text color="gray">Admin</Text>
           </Flex>
         </Flex>
       </Flex>
