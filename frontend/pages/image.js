@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function image() {
   return (
     <div>
-      <h1>Test d'affichage d'image</h1>
+      <h1>Test d'affichage dimage</h1>
       <Image src={testImage} alt="Test Image" height={200} />
     </div>
   );
